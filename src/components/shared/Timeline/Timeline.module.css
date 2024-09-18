@@ -1,0 +1,59 @@
+/* VerticalTimeline.module.css */
+
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timelineItem {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.timelineStep {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #333;
+  color: #fff;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.timelineContentLeft {
+  margin-right: auto;
+  text-align: left;
+}
+
+.timelineContentRight {
+  margin-left: auto;
+  text-align: right;
+}
+
+.timelineTitle {
+  margin-top: 0;
+}
+
+.timelineDescription {
+  margin-bottom: 10px;
+}
+
+.timelineDate {
+  font-style: italic;
+  color: #666;
+}
+
+.line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background-color: #ccc;
+}

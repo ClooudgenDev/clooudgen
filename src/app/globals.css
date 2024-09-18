@@ -1,0 +1,374 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* shadcn default variables start*/
+    --background: 210 16% 98%;
+    --foreground: 210 100% 16%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 100% 16%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 100% 16%;
+
+    --primary: 197 76% 49%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 200 81.2% 41.4%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* --secondary: 216 46% 55%;
+    --secondary-foreground: 222.2 47.4% 11.2%; */
+
+    --tertiary: 200 100% 29%;
+    --tertiary-foreground: 210 40% 98%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+    /* shadcn default variables end*/
+
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-bold: 700;
+
+    --fs-300: 0.8125rem;
+    --fs-400: 0.875rem;
+    --fs-500: 0.9375rem;
+    --fs-600: 1.5rem;
+    --fs-700: 1.875rem;
+    --fs-800: 2.5rem;
+    --fs-900: 3.5rem;
+
+    --fs-body: var(--fs-400);
+    --fs-primary-heading: var(--fs-800);
+    --fs-secondary-heading: var(--fs-600);
+    --fs-nav: var(--fs-500);
+    --fs-button: var(--fs-300);
+
+    --size-100: 0.25rem;
+    --size-200: 0.5rem;
+    --size-300: 0.75rem;
+    --size-400: 1rem;
+    --size-500: 1.5rem;
+    --size-600: 2rem;
+    --size-700: 3rem;
+    --size-800: 4rem;
+    --size-900: 5rem;
+  }
+
+  @media (min-width: 50em) {
+    :root {
+      --fs-body: var(--fs-500);
+      --fs-primary-heading: var(--fs-900);
+      --fs-secondary-heading: var(--fs-800);
+      --fs-nav: var(--fs-500);
+    }
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 208.7 43.5% 36.3%;
+    --secondary-foreground: 207, 35%, 50%;
+
+    --tertiary: 189 85% 27%;
+    --tertiary-foreground: 210 40% 98%;
+    /* --tertiary: 217.2 32.6% 17.5%;
+    --tertiary-foreground: 210 40% 98%; */
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  h1 {
+    @apply text-2xl font-bold md:text-4xl sm:text-3xl lg:text-5xl;
+  }
+
+  h2 {
+    @apply text-xl font-bold md:text-3xl sm:text-2xl lg:text-4xl;
+    /* font-size: calc(1.325rem + 0.9vw);
+    line-height: 1.2; */
+  }
+
+  h3 {
+    @apply text-lg font-bold md:text-2xl sm:text-xl lg:text-3xl;
+  }
+
+  h4 {
+    @apply text-sm font-medium lg:text-lg md:text-base;
+  }
+
+  .description {
+    @apply text-sm font-medium text-gray-500 lg:text-lg md:text-base;
+  }
+}
+
+/* ---------------- Linear Gradient -------------------- */
+
+.gradient-blue {
+  background: linear-gradient(90deg, #3a61b0, #63c8ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #fff;
+  /* Fallback text color */
+  line-height: 1.5;
+}
+
+.gradient-process {
+  background: linear-gradient(
+    180deg,
+    rgba(112, 232, 248, 0.28) 0%,
+    rgba(16, 97, 253, 0.28) 100%
+  );
+}
+
+.gradient-theme {
+  /* background: linear-gradient(90deg, #002952 0%, #1EA6DC 100%); */
+  @apply bg-gradient-to-t from-[#002952] to-[#1EA6DC];
+}
+.gradient-theme:hover {
+  @apply bg-gradient-to-b from-[#002952] to-[#1EA6DC];
+}
+
+.hover-gradient:hover {
+  @apply bg-gradient-to-t from-[#002952] to-[#1EA6DC];
+}
+
+.digital-gradient {
+  background: linear-gradient(
+    112deg,
+    rgba(255, 255, 255, 0.66) 13.85%,
+    rgba(58, 159, 214, 0.43) 100%
+  );
+  /* box-shadow: 0px 0px 17px 0px rgba(58, 97, 176, 0.30); */
+}
+
+.bg-gradient {
+  @apply bg-gradient-to-t from-[#287DAA] to-[#042B51];
+}
+
+.gradient-theme-v1 {
+  @apply bg-gradient-to-b from-[#63C8FF] to-secondary;
+}
+
+.effect-blue {
+  @apply origin-top transform before:absolute before:top-0 before:block before:h-0 before:w-full before:duration-500 hover:before:absolute hover:before:left-0 hover:before:-z-10 hover:before:h-full hover:before:rounded-md hover:before:bg-primary;
+}
+
+.effect-white {
+  @apply origin-top transform before:absolute before:top-0 before:block before:h-0 before:w-full before:duration-500 hover:before:absolute hover:before:left-0 hover:before:-z-10 hover:before:h-full hover:before:rounded-md hover:before:bg-background;
+}
+
+/* .gradient-theme-v1{
+  @apply bg-gradient-to-b from-[#1EA6DC] to-[#002952]
+} */
+
+/* @apply */
+/* Animate vartically */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(100px); /* Adjust this value as needed */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 20s infinite linear; /* Adjust the duration as needed */
+}
+
+.run {
+  animation: moveRight 3s linear infinite;
+  /* Adjust duration and timing function as needed */
+}
+
+@keyframes moveRight {
+  0% {
+    left: -100%;
+    /* Initial position */
+  }
+
+  100% {
+    left: 100%;
+    /* Final position */
+  }
+}
+
+@layer utilities {
+  .section-topheading {
+    color: hsl(var(--primary));
+    position: relative;
+    margin-bottom: 4px;
+  }
+
+  /* .section-topheading::before {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+
+    display: block;
+    width: 3rem;
+    height: 0.25rem;
+    background-color: hsl(var(--primary));
+    margin-bottom: 1rem;
+  } */
+
+  body {
+    overflow-x: hidden;
+    min-width: 320px;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .section-heading {
+    color: hsl(var(--foreground));
+    font-weight: 700;
+  }
+
+  .section-top-spacing {
+    @apply mt-20 md:mt-32;
+  }
+
+  .container {
+    @apply px-3;
+  }
+
+  .heading-1 {
+    @apply text-2xl font-bold md:text-4xl sm:text-3xl lg:text-5xl 2xl:text-6xl;
+  }
+
+  .description-1 {
+    @apply my-3 text-sm font-medium lg:text-lg md:text-base;
+  }
+
+  .heading-2 {
+    @apply text-2xl font-bold lg:text-4xl md:text-3xl;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hidden-md-to-xs {
+    display: none;
+  }
+}
+
+@media (max-width: 624px) {
+  .hidden-sm-to-xs {
+    display: none;
+  }
+}
+
+/* ---------------------------Bottom Header Animation---------------------------- */
+@keyframes pulsex {
+  0% {
+    transform: translateX(-750%);
+  }
+
+  50% {
+    transform: translateX(650%);
+  }
+
+  100% {
+    transform: translateX(-750%);
+  }
+}
+
+/* Add this class to your element to apply the animation */
+.animate-pulsex {
+  animation: pulsex 10s ease-in-out infinite alternate;
+}
+
+/*-------------------------- Bottom Header Animation End --------------------------*/
+
+::-webkit-scrollbar {
+  width: 10px;
+  /* Width of the scrollbar */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  /* Color of the scrollbar track */
+  border-radius: 8px;
+  /* Rounded corners */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #c4c4c4;
+  /* Color of the scrollbar handle */
+  border-radius: 8px;
+  /* Rounded corners */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #9e9e9e;
+  /* Color of the scrollbar handle on hover */
+}
+
+.scrollbar-hidden {
+  scrollbar-width: none;
+}
+
+.rotate-10 {
+  --tw-rotate: 10deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-rotate-10 {
+  --tw-rotate: -10deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
