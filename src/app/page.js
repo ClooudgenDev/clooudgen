@@ -46,7 +46,7 @@ export default function Home() {
       {/*------------------- services section ends -------------------*/}
 
       {/* ------Project section start from here------ */}
-      <ProjectSection />
+      {/* <ProjectSection /> */}
       {/* ------Project section start from here------ */}
       {/* itSupport section start */}
       <ItSupport />
