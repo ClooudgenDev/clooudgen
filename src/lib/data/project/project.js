@@ -114,7 +114,7 @@ import Project213 from '@/assets/portfolio/project2/UserDashboardProfile.jpg';
 import Project214 from '@/assets/portfolio/project2/UserDashboardWishlist.jpg';
 import Project215 from '@/assets/portfolio/project2/UserDashboard.jpg';
 import Project2Thumbnail from '@/assets/portfolio/thumnail/MedicineStoreUpworkThumbnail.png';
-import Project31 from '@/assets/portfolio/project3/LandingPageFirstHalf.jpg';
+// import Project31 from '@/assets/portfolio/project3/LandingPageFirstHalf.jpg';
 import Project32 from '@/assets/portfolio/project3/LandngPageSecondHalf.jpg';
 import Project3Thumbnail from '@/assets/portfolio/thumnail/homeDecorWebsiteUpworkThumbnail.png';
 import Project41 from '@/assets/portfolio/project4/restaurantWebsiteLandingPage1.jpg';
@@ -333,7 +333,7 @@ const ProjectData = [
     projectName: 'Jewelry Store Ecommerce Platform',
     thumnail: Project3Thumbnail,
     img: [
-      Project31,
+      // Project31,
       Project32
     ],
     projectDescription: [
