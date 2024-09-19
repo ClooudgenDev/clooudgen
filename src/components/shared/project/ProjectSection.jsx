@@ -15,7 +15,7 @@ const ProjectSection = () => {
             <Project />
 
             <FadeUp>
-                <Link href="/project-album" className='flex justify-center pt-10'>
+                <Link href="/project-album" className='flex justify-center'>
                     <Button >View all</Button>
                 </Link>
             </FadeUp>

@@ -10,7 +10,7 @@ const ItSupport = () => {
             ></div>
             <div className="relative z-30">
                 <h2 className="my-8 text-center section-heading">
-                    Total IT support from Bangladesh
+                    Total IT support from Florida, USA
                 </h2>
                 <Hero className={'md:grid-cols-1 lg:grid-cols-2 '}  media={ItSupportImage}>
                     <div className="space-y-2 text-justify md:text-lg">
