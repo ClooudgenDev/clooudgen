@@ -42,7 +42,7 @@ const ProjectTab = () => {
                 </div>
             </ZoomIn>
 
-            <div className="grid md:grid-cols-2 mt-20 gap-10 grid-cols-1">
+            <div className="grid grid-cols-1 gap-10 mt-20 sm:grid-cols-2 lg:grid-cols-3">
                 {ProjectData?.map((project,idx)=> (<ProjectCard service={project} key={idx}/>))}
 
             </div>
