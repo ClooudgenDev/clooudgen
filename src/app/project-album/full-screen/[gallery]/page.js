@@ -20,7 +20,7 @@ const Gallery = () => {
     return (
         <main className="mt-32">
             {
-                data?.img?.map((image, index) => <Image key={index} src={image.src} className=" w-[100vw] 2xl:w-[80vw] mx-auto my-5 lg:my-20 cursor-move border-2 border-primary" width={image?.width || 200} height={image?.height} alt="data" />)
+                data?.img?.map((image, index) => <Image key={index} src={image.src} className=" w-[100vw] 2xl:w-[80vw] mx-auto my-5 lg:my-20 cursor-move border-y-2 border-primary" width={image?.width || 200} height={image?.height} alt="data" />)
             }
         </main>
     )
