@@ -43,6 +43,11 @@ const companyData = [
     href: '/career',
     description: 'Join us to build customized teams, delivering solutions that drive business success and innovation.',
   },
+  {
+    title: 'Branch Address',
+    href: '/location',
+    description: 'Branch Address',
+  },
 
 ];
 
