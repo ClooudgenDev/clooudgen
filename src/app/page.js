@@ -6,6 +6,7 @@ import OurClients from '@/components/pages/home/OurClients';
 import RemoteTeam from '@/components/pages/home/RemoteTeam';
 import Services from '@/components/pages/home/Services';
 import WhyCloudgen from '@/components/pages/home/WhyCloudgen';
+import Popup from '@/components/shared/advertisement/Popup';
 import ContactUsDialog from '@/components/shared/contactUsDialog/ContactUsDialog';
 import Hero from '@/components/shared/hero/Hero';
 import ProjectSection from '@/components/shared/project/ProjectSection';
@@ -80,6 +81,8 @@ export default function Home() {
       {/*--------------- Our clients section ends ---------------*/}
 
       {/* Contact Clooud Gen section start */}
+
+      <Popup isVisible={true} />
 
       {/*--------------- Contact Clooud Gen section ends ---------------*/}
     </main>
